@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Event Management System</h1>
+    </header>
+
+    <section>
+        <h2>Login</h2>
+
+        <form onsubmit="loginUser(event)">
+            <label>Username:</label>
+            <input type="text" id="username" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="loginMessage"></p>
+    </section>
+
+    <script>
+        function loginUser(event) {
+            event.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "1234") {
+                document.getElementById("loginMessage").innerHTML =
+                    "Login successful!";
+                document.getElementById("loginMessage").style.color = "green";
+            } else {
+                document.getElementById("loginMessage").innerHTML =
+                    "Invalid username or password!";
+                document.getElementById("loginMessage").style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
