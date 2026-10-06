@@ -26,25 +26,64 @@
 
     <section id="events">
         <h2>Upcoming Events</h2>
-        <input type="text" id="searchEvent"
-       placeholder="Search Event..."
-       onkeyup="searchEvent()">
-        <input type="text" id="searchEvent"
-       placeholder="Search Event..."
-       onkeyup="searchEvent()">
 
+    <div class="event-container">
 
-        <div class="event">
+        <div class="event-card">
+
+            <img src="images/cultural.jpg" alt="College Cultural Event">
+
             <h3>College Cultural Event</h3>
-            <p>Date: 10 October 2026</p>
-            <p>Venue: College Auditorium</p>
+
+            <p>📅 Date: 24 October 2026</p>
+            <p>⏰ Time: 11:00 AM</p>
+            <p>📍 Venue: College Auditorium</p>
+            <p>👥 Available Seats: 100</p>
+
+            <p>
+                Enjoy music, dance and cultural performances.
+            </p>
+
+    <button onclick="showEventDetails('cultural')">
+    View Details
+</button>
+
         </div>
 
-        <div class="event">
+
+        <div class="event-card">
+
+            <img src="images/tech.jpg" alt="Technical Symposium">
+
             <h3>Technical Symposium</h3>
-            <p>Date: 20 October 2026</p>
-            <p>Venue: Seminar Hall</p>
+
+            <p>📅 Date: 10 October 2026</p>
+            <p>⏰ Time: 10:30 AM</p>
+            <p>📍 Venue: Seminar Hall</p>
+            <p>👥 Available Seats: 150</p>
+
+            <p>
+                Learn and participate in exciting technical events.
+            </p>
+<button onclick="showEventDetails('technical')">
+    View Details
+</button>
+            
+
         </div>
+
+    </div>
+
+</section>
+       
+
+    <input type="text" id="searchEvent"
+           placeholder="Search Event..."
+           onkeyup="searchEvent()">
+
+    <div class="event-container">
+
+        
     </section>
 
     <section id="register">
@@ -52,10 +91,12 @@
 
         <form onsubmit="registerEvent(event)">
             <label>Name:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" required
+       placeholder="Enter your name">
 
             <label>Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" required
+       placeholder="Enter your email">
 
             <label>Select Event:</label>
             <select id="event" required>
@@ -68,6 +109,7 @@
         </form>
 
         <p id="message"></p>
+        <div id="registrationDetails"></div>
     </section>
 
     <section id="contact">
